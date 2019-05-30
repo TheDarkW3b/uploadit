@@ -21,17 +21,6 @@ if (!file_exists(__DIR__.'/madeline.php')) {
     copy('https://phar.madelineproto.xyz/madeline.php', __DIR__.'/madeline.php');
 }
 require __DIR__.'/madeline.php';
-$settings_default = ['session' => 'sessions/default.madeline', 'readmsg' => true, 'auto_reboot' => true, 'multithread' => false, 'old_update_parser' => false, 'madeline' => ['app_info' => ['api_id' => 6, 'api_hash' => 'eb06d4abfb49dc3eeb1aeb98ae0f581e', 'lang_code' => 'it', 'app_version' => '4.7.0'], 'logger' => ['logger' => 0], 'updates' => ['handle_old_updates' => 0]]];
-if (isset($settings) and is_array($settings)) $settings = array_merge($settings_default, $settings); else $settings = $settings_default;
-unset($settings_default);
-if (isset($argv[1]) and $argv[1]) $settings['session'] = 'sessions/'.$argv[1].'.madeline';
-if ($settings['auto_reboot'] and function_exists('pcntl_exec')) {
-  register_shutdown_function(function () {
-    if (PID === getmypid()) pcntl_exec($_SERVER['_'], [__FILE__, $settings['session']]);
-  });
-}
-$MadelineProto = new \danog\MadelineProto\API($settings['session'], $settings['madeline']);
-
 class EventHandler extends \danog\MadelineProto\EventHandler
 {
     public function onUpdateNewChannelMessage($update)
