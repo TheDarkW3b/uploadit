@@ -21,7 +21,7 @@ if (!file_exists(__DIR__.'/madeline.php')) {
     copy('https://phar.madelineproto.xyz/madeline.php', __DIR__.'/madeline.php');
 }
 require __DIR__.'/madeline.php';
-$settings_default = ['session' => 'session.madeline', 'readmsg' => true, 'auto_reboot' => true, 'multithread' => false, 'old_update_parser' => false, 'madeline' => ['app_info' => ['api_id' => 6, 'api_hash' => 'eb06d4abfb49dc3eeb1aeb98ae0f581e', 'lang_code' => 'it', 'app_version' => '4.7.0'], 'logger' => ['logger' => 0], 'updates' => ['handle_old_updates' => 0]]];
+$settings_default = ['madeline' => ['app_info' => ['api_id' => 6, 'api_hash' => 'eb06d4abfb49dc3eeb1aeb98ae0f581e', 'lang_code' => 'it', 'app_version' => '4.7.0'], 'logger' => ['logger' => 0], 'updates' => ['handle_old_updates' => 0]]];
 $MadelineProto = new \danog\MadelineProto\API('session.madeline', $settings_default);
 $MadelineProto->start();
 class EventHandler extends \danog\MadelineProto\EventHandler
