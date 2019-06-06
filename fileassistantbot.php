@@ -25,6 +25,14 @@ $settings_default = ['session' => 'session.madeline', 'readmsg' => true, 'auto_r
 $MadelineProto = new \danog\MadelineProto\API('session.madeline', $settings_default);
 class EventHandler extends \danog\MadelineProto\EventHandler
 {
+    public function onAny($update)
+    {
+      foreach (glob("files/*") as $file) {
+if(time() - filectime($file) > 600){
+unlink($file);
+}
+}
+}
     public function onUpdateNewChannelMessage($update)
     {
         $this->onUpdateNewMessage($update);
@@ -38,7 +46,18 @@ class EventHandler extends \danog\MadelineProto\EventHandler
 
                try {
             if (isset($update['message']['media']) && ($update['message']['media']['_'] == 'messageMediaPhoto' || $update['message']['media']['_'] == 'messageMediaDocument')) {
-                $sent_message = $this->messages->sendMessage(['peer' => $update, 'message' => 'FileToLink function is closed', 'reply_to_msg_id' => $update['message']['id']]);
+                $sent_message = $this->messages->sendMessage(['peer' => $update, 'message' => 'Generating download link… 0%', 'reply_to_msg_id' => $update['message']['id']]);
+                $last_progress = 0;
+                $time = time();
+                $output_file_name = $this->download_to_dir($update, new \danog\MadelineProto\FileCallback(FILES_PATH,
+                    function ($progress) use ($update, $sent_message, $last_progress) {
+                        $progress = round($progress);
+                        if ($progress > $last_progress) {
+                            $this->messages->editMessage(['id' => $sent_message['id'], 'peer' => $update, 'message' => 'Generating download link… '.$progress.'%']);
+                            $last_progress = $progress;
+                        }
+                    }));
+                $this->messages->editMessage(['id' => $sent_message['id'], 'peer' => $update, 'message' => 'Download link Generated in '.(time() - $time).' seconds!(You have just 10 minutes)'.PHP_EOL.PHP_EOL.'💾 '.basename($output_file_name).PHP_EOL.PHP_EOL.'📥 '.WEBSERVER_URL.str_replace(__DIR__.'/', '', str_replace(' ', '%20', $output_file_name)), 'reply_to_msg_id' => $update['message']['id']]);
             } elseif (isset($update['message']['message'])) {
                 $text = $update['message']['message'];
                 if ($text == '/start') {
@@ -205,7 +224,6 @@ private function remote_file_size( $url ) {
         return false;
     }
 }
-$MadelineProto = new \danog\MadelineProto\API('session.madeline');
 $MadelineProto->start();
 $MadelineProto->setEventHandler('\EventHandler');
 $MadelineProto->loop(-1);
