@@ -27,3 +27,7 @@ You can use with 2 methods:
 `sudo apt-get install php7.2 php7.2-dev php7.2-fpm php7.2-curl php7.2-xml php7.2-zip php7.2-gmp php7.2-cli php7.2-mbstring git -y`
 
 // Working With Debian based distro
+
+## Credits
+Thanks @nimah79 for async and helps!
+Thanks @spechide for helps!
