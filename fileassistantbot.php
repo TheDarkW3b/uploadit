@@ -22,9 +22,14 @@ if (!file_exists(__DIR__.'/madeline.php')) {
 }
 define('MADELINE_BRANCH', '');
 require __DIR__.'/madeline.php';
+use danog\MadelineProto\Shutdown;
+
 
 class EventHandler extends \danog\MadelineProto\EventHandler
 {
+$id = Shutdown::addCallback(static function () {
+    // This function will run on shutdown
+
     public function __construct($MadelineProto)
     {
         parent::__construct($MadelineProto);
@@ -154,6 +159,7 @@ class EventHandler extends \danog\MadelineProto\EventHandler
             }
         } catch (\danog\MadelineProto\RPCErrorException $e) {
         }
+});
     }
     private function byteto($size)
     {
