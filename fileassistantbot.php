@@ -27,9 +27,8 @@ use danog\MadelineProto\Shutdown;
 
 class EventHandler extends \danog\MadelineProto\EventHandler
 {
-$id = Shutdown::addCallback(static function () {
-    // This function will run on shutdown
 
+  
     public function __construct($MadelineProto)
     {
         parent::__construct($MadelineProto);
@@ -159,7 +158,7 @@ $id = Shutdown::addCallback(static function () {
             }
         } catch (\danog\MadelineProto\RPCErrorException $e) {
         }
-});
+
     }
     private function byteto($size)
     {
