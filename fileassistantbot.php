@@ -129,11 +129,6 @@ class EventHandler extends \danog\MadelineProto\EventHandler
                     return;
                 }
                 $filename_length = $filename;
-                if ($filename_length > 60) {
-                    yield $this->messages->sendMessage(['peer' => $update, 'message' => 'Your filename contains '.$filename_length.' characters. Maximum limit allowed in Telegram is 60 characters. Please shorten your filename and try again.', 'reply_to_msg_id' => $message_id]);
-
-                    return;
-                }
                 $client = new Amp\Artax\DefaultClient();
                 $promise = $client->request($url, [Amp\Artax\Client::OP_MAX_BODY_BYTES => (int) (1.5 * (1024 ** 3))]);
                 $response = yield $promise;
