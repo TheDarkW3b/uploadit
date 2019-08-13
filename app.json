@@ -1,7 +1,7 @@
 {
   "name": "Telegram URLUploader",
   "description": "Basic Telegram URL Uploader for Heroku",
-  "repository": "https://github.com/quiec/fileassistantbot",
+  "repository": "https://github.com/hasibulkabir/fileassistantbot",
   "logo": "http://icons.iconarchive.com/icons/graphicloads/100-flat/256/upload-icon.png",
   "keywords": ["telegram", "url", "upload"]
 }
