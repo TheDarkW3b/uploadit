@@ -84,7 +84,7 @@ class EventHandler extends \danog\MadelineProto\EventHandler
                 $text = $update['message']['message'];
                 $chat_id = $update['message']['from_id'];
                 if ($text == '/start') {
-                    yield $this->messages->sendMessage(['peer' => $update, 'message' => 'Hi! please send me any file url or file uploaded in Telegram and I will upload to Telegram as file or generate download link of that file.', 'reply_to_msg_id' => $message_id]);
+                    yield $this->messages->sendMessage(['peer' => $update, 'message' => 'Hi! please send me any file url or file uploaded in Telegram and I will upload to Telegram as file or generate download link of that file. \n Kindly Donate My [Owner](https://t.me/TheDarkW3b) \n Support Group @InFoTelGroup', 'reply_to_msg_id' => $message_id]);
 
                     return;
                 }
