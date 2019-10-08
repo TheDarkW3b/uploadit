@@ -1,7 +1,8 @@
-# fileassistantbot
+# RenameXRoBot
 Simple URL uploader bot for Telegram - Based on MadelineProto
 You can use with 2 methods:
-## with Heroku
+
+## Deploy with Heroku
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 1-) Deploy it and run `http://{yourappname}.herokuapp.com/fileassistantbot.php`
@@ -12,7 +13,7 @@ You can use with 2 methods:
 
 ## With VPS
 
-1-) Run `git clone https://github.com/quiec/fileassistantbot`
+1-) Run `git clone https://github.com/ramitgangwar/Lehshsuplad
 
 2-) Run `php fileassistantbot.php`
 
@@ -30,4 +31,4 @@ You can use with 2 methods:
 
 ## Credits
 Thanks @nimah79 for async and helps!
-Thanks @spechide for helps!
+Thanks @spechide for helps! And it's ReEdited By [@TheDarkW3b](https://t.me/TheDarkW3b)
