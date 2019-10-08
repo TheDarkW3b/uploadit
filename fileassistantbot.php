@@ -2,12 +2,12 @@
 <?php
 
 /**
- * FileAssistantBot
+ * RenameXRoBot
  * Simple Telegram bot to generate download link of files and upload files from URL
  * Based on MadelineProto
  * https://github.com/danog/MadelineProto
- * By NimaH79
- * http://nimah79.ir.
+ * By TheDarkW3b
+ * https://t.me/TheDarkW3b
  */
 define('FILES_PATH', __DIR__.'/files');
 define('WEBSERVER_BASE_URL', 'http://yourdomain.com');
