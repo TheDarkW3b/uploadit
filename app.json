@@ -1,7 +1,7 @@
 {
-  "name": "RenameXRoBot",
+  "name": "UploaditRoBot",
   "description": "Basic Telegram URL Uploader for Heroku",
-  "repository": "https://github.com/ramitgangwar/Lehshsuplad",
+  "repository": "https://github.com/TheDarkW3b/uploadit",
   "logo": "http://icons.iconarchive.com/icons/graphicloads/100-flat/256/upload-icon.png",
   "keywords": ["telegram", "url", "upload"]
 }
