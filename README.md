@@ -1,4 +1,4 @@
-# RenameXRoBot
+# Upload Bot
 Simple URL uploader bot for Telegram - Based on MadelineProto
 You can use with 2 methods:
 
@@ -13,7 +13,7 @@ You can use with 2 methods:
 
 ## With VPS
 
-1-) Run `git clone https://github.com/ramitgangwar/Lehshsuplad
+1-) Run `git clone https://github.com/TheDarkW3b/uploadit
 
 2-) Run `php fileassistantbot.php`
 
