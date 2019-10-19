@@ -2,7 +2,7 @@
 <?php
 
 /**
- * RenameXRoBot
+ * UploaditRoBot
  * Simple Telegram bot to generate download link of files and upload files from URL
  * Based on MadelineProto
  * https://github.com/danog/MadelineProto
@@ -10,7 +10,7 @@
  * https://t.me/TheDarkW3b
  */
 define('FILES_PATH', __DIR__.'/files');
-define('WEBSERVER_BASE_URL', 'http://files.uploadit.host');
+define('WEBSERVER_BASE_URL', 'yourdomain.com');
 define('FILES_EXPIRE_TIME', 24 * 3600); // in seconds
 
 set_time_limit(0);
