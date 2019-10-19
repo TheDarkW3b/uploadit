@@ -1,4 +1,4 @@
-# Upload Bot
+# [UploaditRoBot](https://t.me/UploadIt Robot)
 Simple URL uploader bot for Telegram - Based on MadelineProto
 You can use with 2 methods:
 
