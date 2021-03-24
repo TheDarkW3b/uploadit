@@ -5,17 +5,14 @@ You can use with 2 methods:
 ## Deploy with Heroku
 [![Deploy](https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku)](https://heroku.com/deploy)
 
-1-) Deploy it and run `http://{yourappname}.herokuapp.com/fileassistantbot.php`
-
-2-)Write your App ID/Hash and Bot Token.
-
-3-) Enable Dynos.
+* Deploy it and run `http://{yourappname}.herokuapp.com/fileassistantbot.php`
+* Write your App ID and API Hash and Bot Token
+* Enable Dynos
 
 ## With VPS
 
-1-) Run `git clone https://github.com/TheDarkW3b/uploadit`
-
-2-) Run `php fileassistantbot.php`
+* Run `git clone https://github.com/TheDarkW3b/uploadit`
+* Run `php fileassistantbot.php`
 
 ## Installing Requirements for VPS
 
@@ -29,6 +26,7 @@ You can use with 2 methods:
 
 // Working With Debian based distro
 
-## Credits
+## Credits 
+
 Thanks [@nimah79](https://t.me/nimah79) for async and helps!
 Thanks [@spechide](https://github.com/SpEcHIDe) for helps! And it's ReEdited By [@TheDarkW3b](https://t.me/TheDarkW3b)
