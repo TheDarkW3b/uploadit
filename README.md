@@ -13,7 +13,7 @@ You can use with 2 methods:
 
 ## With VPS
 
-1-) Run `git clone https://github.com/TheDarkW3b/uploadit
+1-) Run `git clone https://github.com/TheDarkW3b/uploadit`
 
 2-) Run `php fileassistantbot.php`
 
