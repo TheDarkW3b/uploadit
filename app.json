@@ -1,7 +1,40 @@
 {
-  "name": "UploaditRoBot",
-  "description": "Basic Telegram URL Uploader for Heroku",
+  "name": "Pyrogram String Session Generator",
+  "description": ""Basic Telegram URL Uploader for Heroku",
+  "logo": "https://te.legra.ph/file/14f8e64180ff4e9f7b2db.jpg",
+  "keywords": ["telegram", "url", "upload"],
+    "buildpacks": [{
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+      {
+         "options": {
+            "version": "12"
+         },
+         "plan": "heroku-postgresql"
+      }
+   ],
   "repository": "https://github.com/TheDarkW3b/uploadit",
-  "logo": "http://icons.iconarchive.com/icons/graphicloads/100-flat/256/upload-icon.png",
-  "keywords": ["telegram", "url", "upload"]
+    "API_ID": {
+      "description": "Get this value from my.telegram.org.",
+      "required": true,
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org.",
+      "required": true,
+      "value": ""
+    },
+    "BOT_TOKEN": {
+      "description": "Obtain a Telegram bot token by contacting @BotFather",
+      "required": true,
+      "value": ""
+    }
+      }
 }
